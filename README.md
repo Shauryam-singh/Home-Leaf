@@ -111,7 +111,7 @@ We welcome contributions from the community! To contribute to Home Leaf, follow 
 
 If you have any questions or suggestions, feel free to contact us:
 
-- **Email:** contact.legitkiller@gmail.com
+- **Email:** shauryamsingh9@gmail.com
 
 ---
 
