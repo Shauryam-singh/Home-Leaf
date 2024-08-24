@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruits And Vegetables - Home Leaf</title>
+    <link rel="stylesheet" href="fruits-vegitables.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" href= "../images/Logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="scroll-up-btn show">
+        <i class='bx bx-chevron-up'></i>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="left">
+                <div class="logo">
+                    <a href="../index.php"><img src="../images/Logo.png" alt="Logo" draggable="false"></a>
+                </div>
+            </div>
+            <div class="searchbox">   
+                <input placeholder="Search for groceries" class="desktop-searchBar" value=""
+                data-reactid="904">
+            </div>
+            <div class="right">
+                <div class="cart">
+                    <a href="../cart/cart.php"><i class='bx bx-cart'></i></a>
+                </div>
+                <div class="user">
+                    <a href="../user/logined-user.php"><i class='bx bx-user-circle'></i></a>
+                </div>
+            </div>
+        </div><div class="nav2">
+            <div class="container">
+                <div class="dropdown">
+                    <button class="dropbtn">Shop with category ▼</button>
+                    <div class="dropdown-content">
+                        <a href="../fruits-vegitables/fruits-vegitables.html">Fruit & Vegetable</a>
+                        <a href="#">Foodgrains, Oil & Masala</a>
+                        <a href="#">Bakery, Cakes & Dairy</a>
+                        <a href="#">Beverages</a>
+                        <a href="#">Snacks</a>
+                    </div>
+                </div>
+                <div class="others">
+                    <a href="">Exotic Fruits & Veggies</a>
+                </div>
+                <div class="others">
+                    <a href="">Tea</a>
+                </div>
+                <div class="others">
+                    <a href="">Ghee</a>
+                </div>
+                <div class="others">
+                    <a href="">Fresh Vegetables</a>
+                </div>
+                <div class="others">
+                    <a href="">Milk</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="home">
+        <a href="../index.php"><i class='bx bx-home'></i>
+        <span>Home / </span></a>
+        <a href="fruits-vegitables.html"><p>Fruits & Vegetables</p></a>
+    </div>
+    
+    <div class="banner">
+        <img src="https://www.bigbasket.com/media/uploads/flatpages/test-1/Fruits%20&%20vegetables.jpg" alt="">
+    </div>
+
+    <div class="heading">
+        <p>Fruits & Vegitables (Number)</p>
+        <div class="buttons">
+            <button class="hide-filter"><i class='bx bx-low-vision'></i> Hide Filter</button>
+            <button class="hide-filter">Relevance <i class='bx bx-filter'></i> </button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="filter">
+            <h3>Shop by Category</h3>
+            <div class="category">
+                <span>Fruits & Vegitables</span>
+                <p>Cuts & sprouts</p>
+                <p>Exotic Fruit & Veggies</p>
+                <p>Flower Bouquets, Bunches</p>
+                <p>Fresh Fruits</p>
+                <p>Fresh Vegitables</p>
+            </div>
+            <h3>Refined By</h3>
+        </div>
+        <div class="items">
+            <div class="card-container">
+                <div class="card" id="card1">
+                    <a href="">
+                    <div class="card-img">
+                        <img src="../images/fruits-vegitables/Capsicum.jpeg">
+                    </div>
+                    </a>
+                    <div class="item-details">
+                        <div class="item-name">
+                            <h3>Capsicum - Green (Loose)</h3>
+                        </div>
+                        <div class="amount">
+                            <label for="amount1"></label>
+                            <select id="amount1" name="amount" onchange="calculatePrice('card1')">
+                                <option value="250g">250g</option>
+                                <option value="500g">500g</option>
+                                <option value="1kg">1kg</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <p id="price1">Price: ₹17</p>
+                        </div>
+                        <div class="cart-controls">
+                            <div class="cart-btn">
+                                <button onclick="addToCart(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="left">
+                        <img src="../images/Logo.png" alt="Logo">
+                        <h1>Home Leaf</h1>
+                    </div>
+                    <div class="right">
+                        <a href="../index.php">About Us</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="../terms-condition/terms.html">Terms And Conditions</a>
+                        <a href="../contact/contact.php">Contact Us</a>
+                        <a href="../faqs/FAQ.html">FAQs</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="bottom">
+                    <div class="left">
+                        <p>© 2024 Home Leaf - All rights reserved</p>
+                    </div>
+                    <div class="right">
+                        <a href="https://www.instagram.com/home._.leaf/" target="_blank"><i class="bx bxl-instagram"></i></a>
+                        <a href="#"><i class="bx bxl-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+</body>
+</html>
+<script src="fruits-vegitables.js"></script>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantry - Home Leaf</title>
+    <link rel="stylesheet" href="pantry.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" href= "../images/Logo.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="scroll-up-btn show">
+        <i class='bx bx-chevron-up'></i>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="left">
+                <div class="logo">
+                    <a href="../index.php"><img src="../images/Logo.png" alt="Logo" draggable="false"></a>
+                </div>
+            </div>
+            <div class="searchbox">   
+                <input placeholder="Search for groceries" class="desktop-searchBar" value=""
+                data-reactid="904">
+            </div>
+            <div class="right">
+                <div class="cart">
+                    <a href="../cart/cart.php"><i class='bx bx-cart'></i></a>
+                </div>
+                <div class="user">
+                    <a href="../user/logined-user.php"><i class='bx bx-user-circle'></i></a>
+                </div>
+            </div>
+        </div><div class="nav2">
+            <div class="container">
+                <div class="dropdown">
+                    <button class="dropbtn">Shop with category ▼</button>
+                    <div class="dropdown-content">
+                        <a href="../fruits-vegitables/fruits-vegitables.html">Fruit & Vegetable</a>
+                        <a href="#">Foodgrains, Oil & Masala</a>
+                        <a href="#">Bakery, Cakes & Dairy</a>
+                        <a href="#">Beverages</a>
+                        <a href="#">Snacks</a>
+                    </div>
+                </div>
+                <div class="others">
+                    <a href="">Exotic Fruits & Veggies</a>
+                </div>
+                <div class="others">
+                    <a href="">Tea</a>
+                </div>
+                <div class="others">
+                    <a href="">Ghee</a>
+                </div>
+                <div class="others">
+                    <a href="">Fresh Vegetables</a>
+                </div>
+                <div class="others">
+                    <a href="">Milk</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="smart-basket">
+        <div class="container">
+            <div class="upper">
+                <div class="heading">
+                    <h1>My Smart Basket</h1>
+                </div>
+                <div class="viewall">
+                    <div class="text">
+                        <a href="">View All</a>
+                    </div>
+                    <div class="arrows">
+                        <div class="left-arrows">
+                            <p>❮</p>
+                        </div>
+                        <div class="right-arrow">
+                            <p>❯</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container">
+                <div class="card" id="card1">
+                    <a href="">
+                    <div class="card-img">
+                        <img src="../images/fruits-vegitables/Capsicum.jpeg" draggable="false">
+                    </div>
+                    </a>
+                    <div class="item-details">
+                        <div class="item-name">
+                            <h3>Capsicum - Green (Loose)</h3>
+                        </div>
+                        <div class="amount">
+                            <label for="amount1"></label>
+                            <select id="amount1" name="amount" onchange="calculatePrice('card1')">
+                                <option value="250g">250g</option>
+                                <option value="500g">500g</option>
+                                <option value="1kg">1kg</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <p id="price1">Price: ₹17</p>
+                        </div>
+                        <div class="cart-controls">
+                            <div class="cart-btn">
+                                <button onclick="addToCart(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="card2">
+                    <a href="">
+                    <div class="card-img">
+                        <img src="../images/fruits-vegitables/Carrot.jpeg" draggable="false">
+                    </div>
+                    </a>
+                    <div class="item-details">
+                        <div class="item-name">
+                            <h3>Carrot - Orange (Loose)</h3>
+                        </div>
+                        <div class="amount">
+                            <label for="amount2"></label>
+                            <select id="amount2" name="amount" onchange="calculatePrice('card2')">
+                                <option value="250g">250g</option>
+                                <option value="500g">500g</option>
+                                <option value="1kg">1kg</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <p id="price2">Price: ₹11</p>
+                        </div>
+                        <div class="cart-controls">
+                            <div class="cart-btn">
+                                <button onclick="addToCart(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" id="card3">
+                    <div class="card-img">
+                        <a href="">
+                        <img src="../images/fruits-vegitables/Cauliflower.jpeg" draggable="false">
+                    </div>
+                    </a>
+                    <div class="item-details">
+                        <div class="item-name">
+                            <h3>Cauliflower</h3>
+                        </div>
+                        <div class="amount">
+                            <label for="amount3"></label>
+                            <select id="amount3" name="amount" onchange="calculatePrice('card3')">
+                                <option value="1pc - (approx. 400g to 600g)">1pc - (approx. 400g to 600g)</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <p id="price3">Price: ₹19</p>
+                        </div>
+                        <div class="cart-controls">
+                            <div class="cart-btn">
+                                <button onclick="addToCart(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" id="card4">
+                        <a href="">
+                    <div class="card-img">
+                        <img src="../images/fruits-vegitables/Coriander.jpeg"  draggable="false">
+                    </div>
+                    </a>
+                    <div class="item-details">
+                        <div class="item-name">
+                            <h3>Coriander Leaves</h3>
+                        </div>
+                        <div class="amount">
+                            <label for="amount4"></label>
+                            <select id="amount4" name="amount" onchange="calculatePrice('card4')">
+                                <option value="100g">100g</option>
+                                <option value="250g">250g</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <p id="price4">Price: ₹12</p>
+                        </div>
+                        <div class="cart-controls">
+                            <div class="cart-btn">
+                                <button onclick="addToCart(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="card5">
+                    <a href="">
+                    <div class="card-img">
+                        <img src="../images/fruits-vegitables/Cucmber.jpg" draggable="false">
+                    </div>
+                    </a>
+                    <div class="item-details">
+                        <div class="item-name">
+                            <h3>Cucumber (Loose)</h3>
+                        </div>
+                        <div class="amount">
+                            <label for="amount5"></label>
+                            <select id="amount5" name="amount" onchange="calculatePrice('card5')">
+                                <option value="500g">500g</option>
+                                <option value="1kg">1kg</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <p id="price5">Price: ₹16</p>
+                        </div>
+                        <div class="cart-controls">
+                            <div class="cart-btn">
+                                <button onclick="addToCart(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="card6">
+                    <a href="">
+                    <div class="card-img">
+                        <img src="../images/fruits-vegitables/Ladyfinger.jpeg"  draggable="false">
+                    </div>
+                    </a>
+                    <div class="item-details">
+                        <div class="item-name">
+                            <h3>Ladies' Fingers (Loose)</h3>
+                        </div>
+                        <div class="amount">
+                            <label for="amount6"></label>
+                            <select id="amount6" name="amount" onchange="calculatePrice('card6')">
+                                <option value="250g">250g</option>
+                                <option value="500g">500g</option>
+                                <option value="1kg">1kg</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <p id="price6">Price: ₹10</p>
+                        </div>
+                        <div class="cart-controls">
+                            <div class="cart-btn">
+                                <button onclick="addToCart(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="card7">
+                    <a href="">
+                    <div class="card-img">
+                        <img src="../images/fruits-vegitables/Onion.jpeg" draggable="false">
+                    </div>
+                    </a>
+                    <div class="item-details">
+                        <div class="item-name">
+                            <h3>Onion (Loose)</h3>
+                        </div>
+                        <div class="amount">
+                            <label for="amount7"></label>
+                            <select id="amount7" name="amount" onchange="calculatePrice('card7')">
+                                <option value="1kg">1kg</option>
+                                <option value="2kg">2kg</option>
+                                <option value="5kg">5kg</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <p id="price7">Price: ₹36</p>
+                        </div>
+                        <div class="cart-controls">
+                            <div class="cart-btn">
+                                <button onclick="addToCart(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="card8">
+                    <a href="">
+                    <div class="card-img">
+                        <img src="../images/fruits-vegitables/Potato.jpeg"  draggable="false">
+                    </div>
+                    </a>
+                    <div class="item-details">
+                        <div class="item-name">
+                            <h3>Potato</h3>
+                        </div>
+                        <div class="amount">
+                            <label for="amount8"></label>
+                            <select id="amount8" name="amount" onchange="calculatePrice('card8')">
+                                <option value="1kg">1kg</option>
+                                <option value="2kg">2kg</option>
+                                <option value="5kg">5kg</option>
+                            </select>
+                        </div>
+                        <div class="price">
+                            <p id="price8">Price: ₹34</p>
+                        </div>
+                        <div class="cart-controls">
+                            <div class="cart-btn">
+                                <button onclick="addToCart(this)">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="bank-offer">
+        <div class="container">
+            <div class="heading">
+                <h1>Bank Offers</h1>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="offer">
+                <img src="../images/bank-offer/bank-offer-1.png" alt="" draggable="false">
+            </div>
+            <div class="offer">
+                <img src="../images/bank-offer/bank-offer-2.png" alt="" draggable="false">
+            </div>
+            <div class="offer">
+                <img src="../images/bank-offer/bank-offer-3.png" alt="" draggable="false">
+            </div>
+            <div class="offer">
+                <img src="../images/bank-offer/bank-offer-4.png" alt="" draggable="false">
+            </div>
+        </div>
+    </div>
+
+    <div class="fruit">
+        <div class="container">
+            <div class="heading">
+                <h1>Fruits and Vegetables</h1>
+            </div>
+        </div>
+        <div class="offer">
+            <div class="fruits">
+                <img src="../images/fruit-offer/fruit-offer-1.png" alt="" draggable="false">
+            </div>
+            <div class="vegetable">
+                <img src="../images/fruit-offer/fruit-offer-2.png" alt="" draggable="false">
+            </div>
+            <div class="cuts">
+                <img src="../images/fruit-offer/fruit-offer-3.png" alt="" draggable="false">
+            </div>
+            <div class="herbs">
+                <img src="../images/fruit-offer/fruit-offer-4.png" alt="" draggable="false">
+            </div>
+        </div>
+    </div>
+
+    <div class="beverages">
+        <div class="container">
+            <div class="heading">
+                <h1>Beverages</h1>
+            </div>
+        </div>
+        <div class="offer">
+            <div class="health-drink">
+                <img src="../images/beverages-offer/beverage-offer-1.png" alt="" draggable="false">
+            </div>
+            <div class="tea">
+                <img src="../images/beverages-offer/beverage-offer-2.png" alt="" draggable="false">
+            </div>
+            <div class="juices">
+                <img src="../images/beverages-offer/beverage-offer-3.png" alt="" draggable="false">
+            </div>
+            <div class="enery-dring">
+                <img src="../images/beverages-offer/beverage-offer-4.png" alt="" draggable="false">
+            </div>
+        </div>
+    </div>
+
+    <div class="snack">
+        <div class="container">
+            <div class="heading">
+                <h1>Snacks Store</h1>
+            </div>
+        </div>
+        <div class="offer">
+            <div class="snacks">
+                <img src="../images/snacks-offer/snacks-offer-1.png" alt="" draggable="false">
+            </div>
+            <div class="vegetable">
+                <img src="../images/snacks-offer/snacks-offer-2.png" alt="" draggable="false">
+            </div>
+            <div class="cuts">
+                <img src="../images/snacks-offer/snacks-offer-3.png" alt="" draggable="false">
+            </div>
+            <div class="herbs">
+                <img src="../images/snacks-offer/snacks-offer-4.png" alt="" draggable="false">
+            </div>
+        </div>
+    </div>
+        
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="left">
+                    <img src="../images/Logo.png" alt="Logo">
+                    <h1>Home Leaf</h1>
+                </div>
+                <div class="right">
+                    <a href="../index.php">About Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="../terms-condition/terms.html">Terms And Conditions</a>
+                    <a href="../contact/contact.php">Contact Us</a>
+                    <a href="../faqs/FAQ.html">FAQs</a>
+                </div>
+            </div>
+            <hr>
+            <div class="bottom">
+                <div class="left">
+                    <p>© 2024 Home Leaf - All rights reserved</p>
+                </div>
+                <div class="right">
+                    <a href="https://www.instagram.com/home._.leaf/" target="_blank"><i class="bx bxl-instagram"></i></a>
+                    <a href="#"><i class="bx bxl-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+<script src="pantry.js"></script>
