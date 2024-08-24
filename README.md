@@ -59,6 +59,8 @@ To run this project locally, follow these steps:
 
 To set up the database for Home Leaf, run the following SQL commands:
 
+
+```php
 CREATE TABLE users (
      id INT AUTO_INCREMENT PRIMARY KEY,
      username VARCHAR(255) NOT NULL,
@@ -71,7 +73,8 @@ CREATE TABLE users (
      city VARCHAR(255),
      country VARCHAR(255)
 );
-
+```
+```php
 CREATE TABLE orders (
     order_id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
@@ -79,14 +82,16 @@ CREATE TABLE orders (
     order_date DATETIME NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
-
+```
+```php
 CREATE TABLE items (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description TEXT,
     price DECIMAL(10, 2) NOT NULL
 );
-
+```
+```php
 CREATE TABLE reviews (
     id INT AUTO_INCREMENT PRIMARY KEY,
     item_id INT NOT NULL,
@@ -97,8 +102,10 @@ CREATE TABLE reviews (
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (item_id) REFERENCES items(id)
 );
-
+```
+```php
 INSERT INTO items (item_id, item_name) VALUES (1, 'Apple - Red Delicious');
+```
 
 ## Usage
 
