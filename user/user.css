@@ -291,10 +291,12 @@
 .profile .container .right .about-you .card .content h3{
     font-size: 18px;
     color: #000;
+    margin: 10px;
 }
 .profile .container .right .about-you .card .content p{
     font-size: 15px;
     color: #000;
+    margin: 10px;
 }
 .footer {
   padding: 20px 80px;
