@@ -80,7 +80,7 @@ CREATE TABLE orders (
     user_id INT NOT NULL,
     total_amount DECIMAL(10, 2) NOT NULL,
     order_date DATETIME NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES users(user_id)
+    FOREIGN KEY (user_id) REFERENCES users(id)
 );
 ```
 ```php
@@ -104,7 +104,7 @@ CREATE TABLE reviews (
 );
 ```
 ```php
-INSERT INTO items (item_id, item_name) VALUES (1, 'Apple - Red Delicious');
+INSERT INTO items (id, name) VALUES (1, 'Apple - Red Delicious');
 ```
 
 ## Usage
